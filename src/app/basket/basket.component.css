@@ -1,0 +1,36 @@
+table td{
+	padding: 10px 30px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+table img{
+	width: 150px;
+}
+.delete{
+	font-size: 40px;
+	font-family: Arial,sans-serif;
+	color: #f00;
+	cursor: pointer;
+}
+.order{
+	color: #934c00;
+    background-color: #fc0;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .25pt;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    padding: 7px 20px 8px;
+    font-size: 15px;
+    line-height: 1.46;
+    border-radius: 5px;
+    border: 0 none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    margin-top: 20px;
+}

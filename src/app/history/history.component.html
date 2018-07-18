@@ -1,0 +1,28 @@
+<h1>History</h1>
+
+<table cellspacing="0" *ngFor="let item of history">
+	<tr>
+		<td></td>
+		<td>Название</td>
+		<td>ID</td>
+		<td>Цена</td>
+	</tr>
+	<tr *ngFor="let itemarr of item.dataOrder">
+		<td><img src="{{itemarr.data.image}}"></td>
+		<td>{{itemarr.data.name}}</td>
+		<td>{{itemarr.data.id}}</td>
+		<td>{{itemarr.data.price}}</td>
+	</tr>
+	<tr>
+		<td>Сумма</td>
+		<td></td>
+		<td></td>
+		<td>{{item.totalPrice}}</td>
+	</tr>
+	<tr>
+		<td>Дата и время</td>
+		<td></td>
+		<td></td>
+		<td>{{item.dateOrder}}</td>
+	</tr>
+</table>

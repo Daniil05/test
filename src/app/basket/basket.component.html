@@ -1,0 +1,25 @@
+<h1>Basket</h1>
+<table cellspacing="0">
+	<tr>
+		<td></td>
+		<td>Название</td>
+		<td>ID</td>
+		<td>Цена</td>
+		<td>Удалить</td>
+	</tr>
+	<tr *ngFor="let item of basket">
+		<td><img src="{{item.data.image}}"></td>
+		<td>{{item.data.name}}</td>
+		<td>{{item.data.id}}</td>
+		<td>{{item.data.price}}</td>
+		<td><div class="delete" (click)="deleteItem(item.data.id)">x</div></td>
+	</tr>
+	<tr *ngIf="this.orderReady">
+		<td>Сумма</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>{{this.totalPrice}}</td>
+	</tr>
+</table>
+<div class="order" *ngIf="this.orderReady" (click)="getOrder()">Оформить заказ</div>

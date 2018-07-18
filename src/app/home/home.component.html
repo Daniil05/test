@@ -1,0 +1,14 @@
+сортировать по : <button (click)="sort('name')">Name</button> или <button (click)="sort('price')">Price</button>
+<ul class="dashboard">
+	<li *ngFor="let item of items">
+		<div class="img-link"><img src="{{item.data.image}}"></div>
+		<div>{{item.data.name}}</div>
+		<div>id: {{item.data.id}}</div>
+		<div>Цена: {{item.data.price}}</div>
+		<div>Ингредиенты: {{item.data.ingredients}}</div>
+		<div class="add-to-basket" (click)="addToBasket(item.data.id)" *ngIf="item.data.dataStatus">Добавить в Корзину</div>
+		<div [hidden]="item.data.dataStatus" class="added" >
+        	Успешно добавлено
+        </div>
+	</li>
+</ul>
